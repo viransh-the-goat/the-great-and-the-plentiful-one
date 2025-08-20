@@ -3,7 +3,7 @@ from langchain_google_genai import ChatGoogleGenerativeAI as Google
 import os
 from langchain import PromptTemplate, LLMChain
 
-st.set_page_config(page_title='Tweet Generator', page_icon='🐣💀🤫', layout="centered", initial_sidebar_state="auto", menu_items=None)
+st.set_page_config(page_title='roblox qs', page_icon='🐣💀🤫', layout="centered", initial_sidebar_state="auto", menu_items=None)
 st.title("Tweet Generator")
 
 os.environ['GOOGLE_API_KEY'] = st.secrets['GOOGLE_API_KEY']
@@ -14,6 +14,8 @@ Give me {language} in {number} about {topic}
 Please follow the below instructions:
 The main game is roblox the game are games inside of roblox
 give answer to the question{language} 
+make it long and detailed
+answer in detail
 
 """
 tweet_prompt = PromptTemplate(template = tweet_template, input_variables = ['number', 'topic', 'language'])
